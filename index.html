@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Learning Path: Cybersecurity & AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
-  <h1>Hacktoberfest-2020
-</h1>
+    <header>
+        <h1>Interactive Learning Path</h1>
+        <nav>
+            <button id="cyberBtn" class="active">Cybersecurity</button>
+            <button id="aiBtn">Artificial Intelligence</button>
+        </nav>
+    </header>
+    <main>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="roadmap" class="roadmap">
+            <!-- Nodes will be dynamically inserted here -->
+        </div>
+        <div id="node-details" class="hidden">
+            <h2 id="node-title"></h2>
+            <p id="node-description"></p>
+            <div class="resources">
+                <h3>Additional Resources:</h3>
+                <ul id="resource-list"></ul>
+            </div>
+            <button id="complete-btn">Mark as Complete</button>
+        </div>
+    </main>
+    <footer>
+        <button id="prev-btn" disabled>Previous</button>
+        <span id="progress-text">Step 1 of 8</span>
+        <button id="next-btn">Next</button>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
